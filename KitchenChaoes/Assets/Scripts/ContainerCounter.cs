@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearCounter : BaseCounter, IKitchenObjectParent
+public class ContainerCounter : BaseCounter, IKitchenObjectParent
 {
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
     [SerializeField] private Transform topPoint;
 
     private KitchenObject kitchenObject;
+
 
     public override void Interact(Player player)
     {
@@ -33,9 +34,9 @@ public class ClearCounter : BaseCounter, IKitchenObjectParent
         this.kitchenObject = kitchenObject;
     }
 
-    public KitchenObject GetKitchenObject() 
-    { 
-        return kitchenObject; 
+    public KitchenObject GetKitchenObject()
+    {
+        return kitchenObject;
     }
 
     public void ClearKitchenObject()
@@ -47,4 +48,5 @@ public class ClearCounter : BaseCounter, IKitchenObjectParent
     {
         return kitchenObject != null;
     }
+
 }
