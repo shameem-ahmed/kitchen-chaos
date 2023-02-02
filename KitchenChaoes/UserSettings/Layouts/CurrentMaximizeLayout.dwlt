@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 46160
+  controlID: 50388
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 46161
+  controlID: 50389
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 46162
+  controlID: 50360
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.9092546, y: 3.3495767, z: 4.013357}
+    m_Target: {x: 4.338624, y: 3.3982515, z: 1.8977995}
     speed: 2
-    m_Value: {x: 6.9092546, y: 3.3495767, z: 4.013357}
+    m_Value: {x: 4.338624, y: 3.3982515, z: 1.8977995}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -529,13 +529,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.14961198, y: -0.04241387, z: 0.006384499, w: -0.9878418}
+    m_Target: {x: -0.36084267, y: -0.026034893, z: 0.01003272, w: -0.9322418}
     speed: 2
-    m_Value: {x: -0.15108943, y: -0.042403083, z: 0.0064479425, w: -0.9875892}
+    m_Value: {x: -0.36083174, y: -0.026034106, z: 0.010032416, w: -0.93221354}
   m_Size:
-    m_Target: 3.9028664
+    m_Target: 7.3145604
     speed: 2
-    m_Value: 3.7348003
+    m_Value: 7.3145604
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 46111
+  controlID: 50390
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -726,10 +726,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 253}
-      m_SelectedIDs: 9ad8f5ff
-      m_LastClickedID: -665446
-      m_ExpandedIDs: 6469a2ff860ef7ff7644f9ff7a44f9ff8244f9ff2aecfcfffe2cfdff2cd2fdff08e0fdffbef9ffffd8f9ffff26faffff2efaffff50faffff8cfaffffaafaffffdafaffff04fbffff0efbffff
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: b8afa1ffbcafa1ff860ef7ff7644f9ff7a44f9ffeea6fcff2aecfcfffe2cfdff2cd2fdff08e0fdffbef9ffffd8f9ffff26faffff2efaffff50faffff8cfaffffaafaffffdafaffff04fbffff0efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -823,21 +823,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs/Counters
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs/Counters
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity\GitHub\kitchen-chaos\KitchenChaoes
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 188}
-    m_SelectedIDs: cc6f0000
-    m_LastClickedID: 28620
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: c46f0000
+    m_LastClickedID: 28612
     m_ExpandedIDs: 000000000a6e00000c6e00000e6e0000106e0000bc6f00005674000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -891,8 +891,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9ad8f5ff
-    m_LastClickedInstanceID: -665446
+    m_SelectedInstanceIDs: 1a6c0000
+    m_LastClickedInstanceID: 27674
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c2670000d8700000446c0000708b0000ce6c000014920000
     m_RenameOverlay:
@@ -918,7 +918,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 35}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 293
@@ -982,7 +982,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -665446
+  m_LastSelectedObjectID: -6180924
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1045,7 +1045,7 @@ MonoBehaviour:
     m_CachedPref: -302
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 27674
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
