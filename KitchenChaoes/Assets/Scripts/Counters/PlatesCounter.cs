@@ -50,4 +50,9 @@ public class PlatesCounter : BaseCounter
 
         }
     }
+
+    public override void InteractAlternate(Player player)
+    {
+        Interact(player);
+    }
 }

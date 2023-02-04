@@ -7,6 +7,8 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 {
     public static Player Instance { get; private set; }
 
+
+    public event EventHandler OnPickedSomething;
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
 
     public class OnSelectedCounterChangedEventArgs : EventArgs
@@ -55,7 +57,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         }
     }
 
-    void Update()
+    private void Update()
     {
         HandleMovement();
         HandleInteractions();
@@ -115,10 +117,19 @@ public class Player : MonoBehaviour, IKitchenObjectParent
             transform.position += moveDir * moveDistance;
         }
 
-        isWalking = moveDir != Vector3.zero;
+        if (moveDir == Vector3.zero)
+        {
+            isWalking = false;
+        }
+        else
+        {
+            isWalking = true;
+            float rotateSpeed = 10f;
+            transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+        }
 
-        float rotateSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+
+        //isWalking = moveDir != Vector3.zero;
     }
 
     private void HandleInteractions()
@@ -167,6 +178,11 @@ public class Player : MonoBehaviour, IKitchenObjectParent
     public void SetKitchenObject(KitchenObject kitchenObject)
     {
         this.kitchenObject = kitchenObject;
+
+        if (kitchenObject != null)
+        {
+            OnPickedSomething?.Invoke(this, EventArgs.Empty);
+        }
     }
 
     public KitchenObject GetKitchenObject()

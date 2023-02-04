@@ -158,6 +158,11 @@ public class StoveCounter : BaseCounter, IHasProgress
         }
     }
 
+    public override void InteractAlternate(Player player)
+    {
+        Interact(player);
+    }
+
     private bool HasRecipeWithInput(KitchenObjectSO input)
     {
         FryingRecipeSO fryingRecipeSO = GetFryingRecipeSOWithInput(input);
