@@ -17,17 +17,15 @@ public class PlayerSounds : MonoBehaviour
     {
         footstepTimer -= Time.deltaTime;
 
-        if (footstepTimer > 0f)
+        if (footstepTimer < 0f)
         {
             footstepTimer = footstepTimerMax;
 
             if (player.IsWalking())
             {
+                float volume = 1f;
+                SoundManager.Instance.PlayFootstepsSound(player.transform.position, volume);
             }
-            
-            Debug.Log("play walking sound...");
-            float volume = 1f;
-            SoundManager.Instance.PlayFootstepsSound(player.transform.position, volume);
         }
     }
 }

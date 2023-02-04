@@ -69,7 +69,6 @@ public class SoundManager : MonoBehaviour
 
     public void PlayFootstepsSound(Vector3 position, float volume = 1f)
     {
-        Debug.Log("PlayFootstepsSound...");
         PlaySound(AudioClipRefsSO.footstep, position, volume);
     }
 }
