@@ -5,18 +5,39 @@ using UnityEngine;
 
 public class GameInput : MonoBehaviour
 {
+    public static GameInput Instance { get; private set; }
+
     public event EventHandler OnInteractAction;
     public event EventHandler OnInteractAlternateAction;
+    public event EventHandler OnPauseAction;
 
     private PlayerInputActions inputActions;
 
     private void Awake()
     {
+        Instance = this;
+
         inputActions = new PlayerInputActions();
         inputActions.Player.Enable();
+        
         inputActions.Player.Interact.performed += InteractPerformed;
         inputActions.Player.InteractAlternate.performed += InteractAlternatePerformed;
+        inputActions.Player.Pause.performed += PausePerformed; 
 
+    }
+
+    private void OnDestroy()
+    {
+        inputActions.Player.Interact.performed -= InteractPerformed;
+        inputActions.Player.InteractAlternate.performed -= InteractAlternatePerformed;
+        inputActions.Player.Pause.performed -= PausePerformed;
+
+        inputActions.Dispose();
+    }
+
+    private void PausePerformed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnPauseAction?.Invoke(this, EventArgs.Empty);
     }
 
     private void InteractAlternatePerformed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
