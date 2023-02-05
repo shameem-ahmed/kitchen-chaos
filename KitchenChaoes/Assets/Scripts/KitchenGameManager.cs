@@ -75,10 +75,7 @@ public class KitchenGameManager : MonoBehaviour
 
             case State.GameOver:
                 break;
-
         }
-
-        print(state);
     }
 
     public bool IsGamePlaying()
