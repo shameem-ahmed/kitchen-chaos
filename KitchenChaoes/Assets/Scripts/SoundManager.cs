@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
     [SerializeField] private AudioClipRefsSO AudioClipRefsSO;
+    
+    private float volume = 1f;
 
     private void Awake()
     {
@@ -67,8 +70,21 @@ public class SoundManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(audioClipArray[Random.Range(0, audioClipArray.Length)], position, volume);
     }
 
-    public void PlayFootstepsSound(Vector3 position, float volume = 1f)
+    public void PlayFootstepsSound(Vector3 position, float volumeMultiplier = 1f)
     {
-        PlaySound(AudioClipRefsSO.footstep, position, volume);
+        PlaySound(AudioClipRefsSO.footstep, position, volumeMultiplier * volume);
     }
+
+    public void ChangeVolume()
+    {
+        volume += .1f;
+
+        if (volume > 1f) volume = 0f;
+    }
+
+    public float GetVolume()
+    {
+        return volume;
+    }
+
 }
